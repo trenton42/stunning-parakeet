@@ -1,1 +1,3 @@
-
+branches:
+  master:
+    enabled: true
