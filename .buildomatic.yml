@@ -1,3 +1,5 @@
 branches:
   master:
     enabled: true
+    cmds:
+      - ls
