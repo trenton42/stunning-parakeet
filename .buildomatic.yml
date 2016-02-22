@@ -3,6 +3,10 @@ stages:
     dockerfile: Dockerfile
     push: false
     run: true
+    runOptions:
+      volume:
+        - /build
+        - deploy/build
     tagType: tag
     environments:
       - production
