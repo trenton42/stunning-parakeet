@@ -1,7 +1,7 @@
 stages:
   - name: stunning-parakeet
     dockerfile: Dockerfile
-    push: false
+    push: true
     run: true
     runOptions:
       volume:
