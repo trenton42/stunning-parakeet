@@ -1,5 +1,7 @@
-branches:
-  master:
-    enabled: true
-    cmds:
-      - sleep 40
+stages:
+  - name: stunning-parakeet
+    dockerfile: Dockerfile
+    push: false
+    run: false
+    environments:
+      - production
