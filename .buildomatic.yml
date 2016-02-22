@@ -12,7 +12,7 @@ stages:
       - production
     branches:
       - master
-  - name: grc.io/kindrid-stage/stunning-parakeet
+  - name: gcr.io/kindrid-stage/stunning-parakeet
     dockerfile: deploy/Dockerfile
     push: true
     run: false
