@@ -3,6 +3,6 @@ stages:
     dockerfile: Dockerfile
     push: false
     run: false
-    tagType: sha
+    tagType: tag
     environments:
       - production
