@@ -8,3 +8,12 @@ stages:
       - production
     branches:
       - master
+  - name: stunning-parakeet
+    dockerfile: Dockerfile
+    push: false
+    run: false
+    tagType: tag
+    environments:
+      - production
+    branches:
+      - develop
