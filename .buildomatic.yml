@@ -5,8 +5,8 @@ stages:
     run: true
     runOptions:
       volume:
-        - /build
         - deploy/build
+        - /build
     tagType: tag
     environments:
       - production
