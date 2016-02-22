@@ -6,3 +6,5 @@ stages:
     tagType: tag
     environments:
       - production
+    branches:
+      - master
