@@ -9,7 +9,7 @@ stages:
         - /build
     tagType: tag
     environments:
-      - production
+      - staging
     branches:
       - master
   - name: gcr.io/kindrid-stage/stunning-parakeet
