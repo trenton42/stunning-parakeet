@@ -1,0 +1,6 @@
+stages:
+  - name: stunning-parakeet
+  push: false
+  run: false
+  environments:
+    - staging
