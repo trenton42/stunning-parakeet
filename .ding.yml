@@ -1,6 +1,23 @@
 stages:
   - name: stunning-parakeet
-  push: false
-  run: false
-  environments:
-    - staging
+    dockerfile: Dockerfile
+    push: false
+    run: true
+    runOptions:
+      volume:
+        - deploy/build
+        - /build
+    tagType: tag
+    environments:
+      - staging
+    branches:
+      - master
+  - name: gcr.io/kindrid-stage/stunning-parakeet
+    dockerfile: deploy/Dockerfile
+    push: true
+    run: false
+    tagType: tag
+    environments:
+      - production
+    branches:
+      - master
