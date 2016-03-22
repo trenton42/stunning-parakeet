@@ -9,6 +9,9 @@ stages:
         - /build
     environments:
       - staging
+    deployments:
+      - name: test
+        job_file: nomad.json
   - name: gcr.io/kindrid-stage/stunning-parakeet
     dockerfile: deploy/Dockerfile
     push: true
