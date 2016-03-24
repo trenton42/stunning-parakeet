@@ -1,81 +1,71 @@
 {
-"Job": {
-      "Datacenters": [
-        "dc1"
-      ],
-      "ID": "stunning-parakeet",
-      "AllAtOnce": false,
-      "Priority": 50,
-      "Type": "batch",
-      "Name": "stunning-parakeet",
-      "Region": "global",
-      "Constraints": null,
-      "TaskGroups": [
-        {
-          "Meta": null,
-          "Tasks": [
-            {
-              "LogConfig": {
-                "MaxFileSizeMB": 10,
-                "MaxFiles": 10
-              },
-              "KillTimeout": 5000000000,
-              "Name": "stunning-parakeet",
-              "Driver": "docker",
-              "Config": {
-                "Command": "/bin/date",
-                "port_map": [
-                  {
-                    "db": 6379
-                  }
-                ],
-                "image": "{{ .Repo }}:{{ .Tag }}"
-              },
-              "Env": {
-                  "foo": "bar"
-              },
-              "Services": [],
-              "Constraints": null,
-              "Resources": {
-                "Networks": [
-                  {
-                    "DynamicPorts": [
-                      {
-                        "Value": 0,
-                        "Label": "db"
-                      }
-                    ],
-                  }
-                ],
-                "IOPS": 0,
-                "DiskMB": 300,
-                "MemoryMB": 256,
-                "CPU": 500
-              },
-              "Meta": {
-                  "foo": "bar",
-                  "baz": "pipe"
-              }
-            }
-          ],
-          "RestartPolicy": {
-            "Mode": "delay",
-            "Delay": 25000000000,
-            "Interval": 300000000000,
-            "Attempts": 10
-          },
-          "Constraints": null,
-          "Count": 1,
-          "Name": "cache"
-        }
-      ],
-      "Update": {
-        "MaxParallel": 1,
-        "Stagger": 10000000000
-      },
-      "Meta": {
-          "foo": "bar",
-          "baz": "pipe"
-      }
-    }
+	"Job": {
+		"Datacenters": [
+			"dc1"
+		],
+		"ID": "stunning-parakeet",
+		"AllAtOnce": false,
+		"Priority": 50,
+		"Type": "batch",
+		"Name": "stunning-parakeet",
+		"Region": "global",
+		"Constraints": null,
+		"TaskGroups": [{
+			"Meta": null,
+			"Tasks": [{
+				"LogConfig": {
+					"MaxFileSizeMB": 10,
+					"MaxFiles": 10
+				},
+				"KillTimeout": 5000000000,
+				"Name": "stunning-parakeet",
+				"Driver": "docker",
+				"Config": {
+					"Command": "/bin/date",
+					"port_map": [{
+						"db": 6379
+					}],
+					"image": "{{ .Repo }}:{{ .Tag }}"
+				},
+				"Env": {
+					"foo": "bar"
+				},
+				"Services": [],
+				"Constraints": null,
+				"Resources": {
+					"Networks": [{
+						"DynamicPorts": [{
+							"Value": 0,
+							"Label": "db"
+						}]
+					}],
+					"IOPS": 0,
+					"DiskMB": 300,
+					"MemoryMB": 256,
+					"CPU": 500
+				},
+				"Meta": {
+					"foo": "bar",
+					"baz": "pipe"
+				}
+			}],
+			"RestartPolicy": {
+				"Mode": "delay",
+				"Delay": 25000000000,
+				"Interval": 300000000000,
+				"Attempts": 10
+			},
+			"Constraints": null,
+			"Count": 1,
+			"Name": "cache"
+		}],
+		"Update": {
+			"MaxParallel": 1,
+			"Stagger": 10000000000
+		},
+		"Meta": {
+			"foo": "bar",
+			"baz": "pipe"
+		}
+	}
 }
