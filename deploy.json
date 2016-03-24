@@ -72,7 +72,7 @@
       "Update": {
         "MaxParallel": 1,
         "Stagger": 10000000000
-      }
+      },
       "Meta": {
           "foo": "bar",
           "baz": "pipe"
