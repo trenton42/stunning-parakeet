@@ -9,12 +9,13 @@ stages:
         - /build
     environments:
       - staging
-    deployments:
-      - name: test
-        job_file: deploy.hcl
   - name: gcr.io/kindrid-stage/stunning-parakeet
     dockerfile: deploy/Dockerfile
-    push: true
+    push: false
     run: false
     environments:
-      - production
+      - staging
+    deployments:
+      - name: test
+        job_file: deploy.json
+  
