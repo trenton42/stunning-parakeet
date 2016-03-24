@@ -34,6 +34,7 @@
 				"Constraints": null,
 				"Resources": {
 					"Networks": [{
+						"mbps": 1,
 						"DynamicPorts": [{
 							"Value": 0,
 							"Label": "db"
